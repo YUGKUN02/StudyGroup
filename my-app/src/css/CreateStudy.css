@@ -1,0 +1,211 @@
+/* ===================================
+   CreateStudy.css - 스터디 만들기 스타일
+   =================================== */
+
+.create-study-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.create-study-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.create-study-form {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 폼 그룹 */
+.form-group {
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+.form-group.full-width {
+  width: 100%;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.form-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* 입력 필드 */
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #333;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #5b67f7;
+}
+
+.form-input::placeholder {
+  color: #999;
+}
+
+/* 셀렉트 박스 */
+.form-select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #333;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 20px;
+  padding-right: 40px;
+}
+
+.form-select:focus {
+  outline: none;
+  border-color: #5b67f7;
+}
+
+/* 텍스트에어리어 */
+.form-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #333;
+  resize: vertical;
+  font-family: inherit;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+  line-height: 1.6;
+}
+
+.form-textarea:focus {
+  outline: none;
+  border-color: #5b67f7;
+}
+
+.form-textarea::placeholder {
+  color: #999;
+}
+
+/* 글자 수 카운터 */
+.char-count {
+  text-align: right;
+  font-size: 12px;
+  color: #999;
+  margin-top: 4px;
+}
+
+/* 버튼 영역 */
+.form-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.btn-cancel {
+  padding: 12px 32px;
+  background-color: #ffffff;
+  color: #666;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-cancel:hover {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.btn-temp-save {
+  padding: 12px 32px;
+  background-color: #5b67f7;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-temp-save:hover {
+  background-color: #4a56e6;
+}
+
+.btn-submit {
+  padding: 12px 32px;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-submit:hover {
+  background-color: #333333;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .create-study-container {
+    padding: 20px 16px;
+  }
+
+  .create-study-form {
+    padding: 24px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+  }
+
+  .btn-cancel,
+  .btn-temp-save,
+  .btn-submit {
+    width: 100%;
+  }
+}

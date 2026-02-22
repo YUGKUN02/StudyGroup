@@ -1,0 +1,488 @@
+/* ===================================
+   StudyPage.css - 스터디 상세 스타일
+   =================================== */
+
+.study-detail-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #ffffff;
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: #666;
+}
+
+/* 상단 헤더 */
+.study-header {
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+}
+
+.study-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.study-meta {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.meta-badge {
+  padding: 4px 12px;
+  background-color: #5b67f7;
+  color: #ffffff;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.meta-tag {
+  padding: 4px 12px;
+  background-color: #f0f0f0;
+  color: #666;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.study-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.study-actions-top {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-icon {
+  padding: 6px 12px;
+  background-color: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-icon:hover {
+  background-color: #e8e8e8;
+}
+
+/* 참여 신청 */
+.join-section {
+  text-align: right;
+  margin-bottom: 24px;
+}
+
+.btn-join {
+  padding: 12px 32px;
+  background-color: #5b67f7;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-join:hover {
+  background-color: #4a56e6;
+}
+
+/* 스터디 상세 정보 */
+.study-details {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.detail-row {
+  display: flex;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.detail-row:last-child {
+  margin-bottom: 0;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #333;
+  min-width: 100px;
+}
+
+.detail-value {
+  color: #666;
+}
+
+/* 상세 설명 */
+.study-description {
+  padding: 24px 0;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 24px;
+  line-height: 1.8;
+  color: #333;
+  white-space: pre-wrap;
+}
+
+/* 이미지 */
+.study-image {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.study-image img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* 첨부 파일 */
+.study-attachments {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 32px;
+}
+
+.attachment-row {
+  display: flex;
+  gap: 16px;
+}
+
+.attachment-label {
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+.attachment-items {
+  flex: 1;
+}
+
+.attachment-item {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+.attachment-item:last-child {
+  margin-bottom: 0;
+}
+
+/* 댓글 섹션 */
+.comments-section {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 2px solid #e0e0e0;
+}
+
+.comments-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 24px;
+}
+
+.comments-list {
+  margin-bottom: 24px;
+}
+
+/* 댓글 아이템 - 댓글과 대댓글을 모두 포함하는 박스 */
+.comment-item {
+  padding: 16px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.comment-author {
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+.comment-date {
+  font-size: 12px;
+  color: #999;
+}
+
+.comment-content {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* 대댓글 컨테이너 - 같은 박스 안에 포함 */
+.replies-container {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed #d0d0d0;
+}
+
+/* 대댓글 아이템 - 같은 박스 안에서 구분 */
+.reply-item {
+  background-color: #ffffff;
+  padding: 12px;
+  margin-top: 8px;
+  margin-left: 20px;
+  border-radius: 6px;
+  border-left: 3px solid #5b67f7;
+  position: relative;
+}
+
+.reply-item:first-child {
+  margin-top: 0;
+}
+
+/* 대댓글 ㄴ 표시 */
+.reply-indicator {
+  color: #5b67f7;
+  font-weight: bold;
+  margin-right: 4px;
+  font-size: 14px;
+}
+
+/* 답글 작성 영역 - 댓글 박스 맨 아래에 표시 */
+.reply-write {
+  margin-top: 16px;
+  padding: 16px;
+  background-color: #f0f3ff;
+  border-radius: 6px;
+  border: 1px solid #d0dcf7;
+}
+
+/* 댓글 작성 */
+.comment-write {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.comment-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #333;
+  resize: vertical;
+  font-family: inherit;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.comment-textarea:focus {
+  outline: none;
+  border-color: #5b67f7;
+}
+
+.btn-comment-submit {
+  align-self: flex-end;
+  padding: 10px 24px;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-comment-submit:hover {
+  background-color: #333333;
+}
+
+/* 하단 버튼 */
+.bottom-actions {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.btn-back {
+  padding: 12px 32px;
+  background-color: #5b67f7;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-back:hover {
+  background-color: #4a56e6;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .study-detail-container {
+    padding: 20px 16px;
+  }
+
+  .study-title {
+    font-size: 20px;
+  }
+
+  .study-info-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .detail-row {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .attachment-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .reply-item {
+    margin-left: 10px;
+  }
+  
+}
+/* 참여 신청 관리 섹션 */
+.participation-section {
+  margin-top: 24px;
+  margin-bottom: 32px;
+  padding: 20px;
+  background-color: #fdfdfd;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.participation-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.participation-item {
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.participation-item:last-child {
+  border-bottom: none;
+}
+
+.participation-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.participation-user {
+  font-weight: 600;
+}
+
+.participation-sub {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.participation-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-approve,
+.btn-reject {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-approve {
+  background-color: #16a34a;
+  color: #ffffff;
+}
+
+.btn-reject {
+  background-color: #ef4444;
+  color: #ffffff;
+}
+
+.participation-empty {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.participation-help {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* 상태 배지 공통 */
+.status-pill {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-pending {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.status-approved {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.status-rejected {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+/* 모집완료 안내 텍스트 */
+.join-closed-text {
+  font-size: 14px;
+  color: #6b7280;
+}
